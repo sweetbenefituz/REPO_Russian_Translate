@@ -4,7 +4,7 @@
     <AssemblyName>SweetRussianTranslate</AssemblyName>
     <TargetFramework>netstandard2.1</TargetFramework>
     <LangVersion>latest</LangVersion>
-    <Version>0.1.2</Version>
+    <Version>0.1.3</Version>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <GenerateDependencyFile>false</GenerateDependencyFile>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
