@@ -1,0 +1,9 @@
+{
+    "name": "Sweet_Russian_Translate",
+    "version_number": "0.1.2",
+    "website_url": "https://github.com/sweetbenefituz/REPO_Russian_Translate",
+    "description": "Машинно-ручной русский перевод R.E.P.O., построенный на встроенной в игру системе, все возможные строки переведены по смыслу. Для версии игры v0.4.4 (июнь 2026)",
+    "dependencies": [
+        "BepInEx-BepInExPack-5.4.2100"
+    ]
+}

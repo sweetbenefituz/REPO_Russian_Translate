@@ -1,0 +1,11 @@
+<Project>
+  <!-- Скопируй в Local.props и впиши свои пути. Local.props в git не попадает.
+
+       GameManaged — папка Managed внутри установленной игры.
+       RepoProfile — имя профиля в Thunderstore Mod Manager, из него берётся
+       BepInEx и туда же кладётся собранный мод для проверки. -->
+  <PropertyGroup>
+    <GameManaged>C:\Program Files (x86)\Steam\steamapps\common\REPO\REPO_Data\Managed</GameManaged>
+    <RepoProfile>Default</RepoProfile>
+  </PropertyGroup>
+</Project>

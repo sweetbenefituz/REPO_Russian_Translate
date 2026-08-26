@@ -1,0 +1,5 @@
+bin/
+obj/
+*.zip
+mod/SweetRussianTranslate.dll
+src/Local.props

@@ -1,0 +1,865 @@
+# Реплики, которые игра пишет в чат от лица персонажа и отправляет в озвучку.
+# Слева — английский текст ровно как в коде игры, справа — перевод.
+# Совпадение точное, посимвольное.
+# Строки с ключом [LEFT_BEHIND] — список первых реплик брошенного игрока,
+# игра выбирает одну случайно.
+
+# Обратный отсчёт до самоуничтожения (сами цифры игра пишет отдельно)
+I need to get to the truck in...	Мне надо попасть в грузовик за...
+
+# Последняя реплика брошенного игрока
+betrayal	предательство
+betrayal detected	обнаружено предательство
+i'm sorry	простите
+I failed	я подвёл
+oh no, not again	о нет, только не снова
+teamwork makes the dream work	вместе мы сила
+I thought we were friends	я думал, мы друзья
+I thought we were a team	я думал, мы команда
+I thought we were in this together	я думал, мы заодно
+I thought we were a family	я думал, мы семья
+
+# Отсчёт остановлен
+SELF DESTRUCT SEQUENCE CANCELLED!	ПРОЦЕСС САМОУНИЧТОЖЕНИЯ ОТМЕНЁН!
+
+# Прощание перед самоуничтожением
+i'm out	я всё
+Farewell	прощайте
+Adieu	адьё
+sayonara	сайонара
+Auf Wiedersehen	ауф видерзейн
+adios	адиос
+ciao	чао
+Au Revoir	оревуар
+hasta la vista	аста ла виста
+see You Later	до встречи
+later	бывайте
+peace OUT	всем мира
+catch you later	ещё увидимся
+later gator	покеда
+toodles	пока-пока
+bye bye	бай-бай
+bye	пока
+AAAAAAAAAAAAH!	АААААААААААА!
+AAAAAAAAAAAAAAAAAAAAAAAH!	ААААААААААААААААААААААА!
+bye... ... oh?	пока... ... ой?
+this will hurt	будет больно
+it's over for me	мне конец
+why me?	почему я?
+I'm sorry	мне жаль
+i see the light	я вижу свет
+sad but necessary	грустно, но надо
+
+# Падение с высоты
+Ouch! Ouch! Ouch!	Ай! Ай! Ай!
+Ow! Ow! Ow!	Ой! Ой! Ой!
+Oof! Oof! Oof!	Уф! Уф! Уф!
+Owie! Wowie! Zowie!	Ойки! Войки! Зойки!
+Ouchie! Ouchie! Ouchie!	Ойёй! Ойёй! Ойёй!
+error error error	ошибка ошибка ошибка
+system error	системная ошибка
+fatal error	критическая ошибка
+error 404	ошибка 404
+runtime error	ошибка выполнения
+imma falling	я падаю
+falling over	падаююююю
+ooooooooh!	оооооооо!
+oh nooooo!	о нееееет!
+AAAAAAH! AAH!	АААААА! АА!
+AAAAAAAAAAAAAAH!	АААААААААААААА!
+AAAAAAAAAAAAAAAAAAAAAAAAAAAH!	ААААААААААААААААААААААААААА!
+OH! OH! OH!	ОЙ! ОЙ! ОЙ!
+AH! AH! AH!	АЙ! АЙ! АЙ!
+
+# Первая реплика брошенного игрока
+[LEFT_BEHIND]	Меня бросили одного.
+[LEFT_BEHIND]	Они ушли без меня...
+[LEFT_BEHIND]	Я им доверял. Зря.
+[LEFT_BEHIND]	Почему меня не подождали?
+[LEFT_BEHIND]	Команда меня предала.
+[LEFT_BEHIND]	Все уехали. Я остался.
+[LEFT_BEHIND]	Что я сделал не так?
+[LEFT_BEHIND]	Меня забыли в темноте.
+[LEFT_BEHIND]	Друзья бросили меня без слова.
+[LEFT_BEHIND]	Не верю, что они так поступили.
+
+# Реплики любовного зелья. Игра берёт случайный шаблон и подставляет в него
+# случайные слова из словарей ниже — так же, как в оригинале.
+# Прилагательные стоят в мужском роде, глаголы — в неопределённой форме:
+# {playerName} — это ник, род по нему не определить.
+
+# Шаблоны фраз — 87
+[LOVE_TEMPLATE]	Вообще не могу, до чего {playerName} {adjective}.
+[LOVE_TEMPLATE]	{playerName} делает всё {intensifier} по-настоящему.
+[LOVE_TEMPLATE]	Почему {playerName} такой {adjective}? Такая милота!
+[LOVE_TEMPLATE]	Каждый раз, когда я вижу {playerName}, хочется {intransitiveVerb}.
+[LOVE_TEMPLATE]	{playerName} просто {intensifier} {adjective}, понимаете?
+[LOVE_TEMPLATE]	Заставило меня {adverb} думать о {playerName} весь день.
+[LOVE_TEMPLATE]	Просто хочу {transitiveVerb} {playerName}.
+[LOVE_TEMPLATE]	Ох, {playerName} {intensifier} {adjective}!
+[LOVE_TEMPLATE]	Когда {playerName} улыбается, хочется {intransitiveVerb}.
+[LOVE_TEMPLATE]	{playerName}, ты такой {adjective}!
+[LOVE_TEMPLATE]	Может, обсудим, до чего {playerName} {adjective}?
+[LOVE_TEMPLATE]	У {playerName} такой {adjective} вайб.
+[LOVE_TEMPLATE]	Только что видел {playerName} — какой {adjective}, такая прелесть.
+[LOVE_TEMPLATE]	Вау, {playerName} такой {adjective}!
+[LOVE_TEMPLATE]	Каждый раз, когда {playerName} говорит, хочется {intransitiveVerb}.
+[LOVE_TEMPLATE]	{playerName} и я = {intensifier} {adjective} вайб.
+[LOVE_TEMPLATE]	Это только мне кажется, или {playerName} {intensifier} {adjective}?
+[LOVE_TEMPLATE]	Не буду врать, {playerName} {adverb} {adjective}.
+[LOVE_TEMPLATE]	{playerName} всегда {adjective}, и мне это нравится.
+[LOVE_TEMPLATE]	Не могу перестать {intransitiveVerb} из-за {playerName}.
+[LOVE_TEMPLATE]	Угадайте, кто влюблён в {playerName}? Я!
+[LOVE_TEMPLATE]	{playerName} входит — и мой день сразу {intensifier} {adjective}.
+[LOVE_TEMPLATE]	Эй, {playerName}, оставайся собой!
+[LOVE_TEMPLATE]	Рядом с {playerName} весь мир {adjective}.
+[LOVE_TEMPLATE]	Просто {adverb} мечтаю о {playerName}.
+[LOVE_TEMPLATE]	{playerName} сегодня прямо {adjective}.
+[LOVE_TEMPLATE]	По-тихому: {playerName} — самый {adjective} человек.
+[LOVE_TEMPLATE]	В открытую влюблён в {playerName}!
+[LOVE_TEMPLATE]	В {playerName} есть этот {adjective} шарм.
+[LOVE_TEMPLATE]	Серьёзно, вайб у {playerName} {intensifier} {adjective}.
+[LOVE_TEMPLATE]	Не могу не {transitiveVerb} {playerName}; он такой {adjective}.
+[LOVE_TEMPLATE]	{playerName} {adverb} мой {noun}!
+[LOVE_TEMPLATE]	Мир рядом с {playerName} куда более {adjective}.
+[LOVE_TEMPLATE]	Смех {playerName} {intensifier} {adjective}.
+[LOVE_TEMPLATE]	Мой мир {adverb} перевернулся. Теперь я хочу только — {transitiveVerb} {playerName}.
+[LOVE_TEMPLATE]	Почему {playerName} такой {adjective}?
+[LOVE_TEMPLATE]	Видели {playerName} сегодня? Такой {adjective}!
+[LOVE_TEMPLATE]	{adverb} {adjective} момент: как сильно я могу {transitiveVerb} {playerName}.
+[LOVE_TEMPLATE]	Я, каждый раз, когда вижу {playerName}: ну какой же {adjective}!
+[LOVE_TEMPLATE]	Из-за {playerName} мне {adverb} хочется {intransitiveVerb}.
+[LOVE_TEMPLATE]	Только что видел {playerName} — и да, всё ещё {adjective}.
+[LOVE_TEMPLATE]	{playerName} — мой {intensifier} {adjective} краш.
+[LOVE_TEMPLATE]	Подтверждаю: {playerName} {adjective}!
+[LOVE_TEMPLATE]	Настроение дня: {intransitiveVerb} о том, до чего {playerName} {adjective}.
+[LOVE_TEMPLATE]	{playerName}, хватит, ты слишком {adjective}; я не выдерживаю.
+[LOVE_TEMPLATE]	Когда {playerName} {intensifier} {adjective}... *млеет*
+[LOVE_TEMPLATE]	Просто хочется {intransitiveVerb} от того, что {playerName} такой {adjective}.
+[LOVE_TEMPLATE]	Ага, {playerName} становится всё более {adjective}.
+[LOVE_TEMPLATE]	Из-за {playerName} я верю, что мир {intensifier} {adjective}.
+[LOVE_TEMPLATE]	Напоминание дня: {playerName} {intensifier} {adjective}.
+[LOVE_TEMPLATE]	Честно говоря, {playerName} {adverb} носит этот {adjective} образ.
+[LOVE_TEMPLATE]	Увидеть {playerName} сегодня было {adverb} лучшим моментом.
+[LOVE_TEMPLATE]	Не могу перестать {intransitiveVerb}, когда думаю о {playerName}.
+[LOVE_TEMPLATE]	{playerName}, из-за тебя моё сердце готово {intransitiveVerb}.
+[LOVE_TEMPLATE]	Можно ли {transitiveVerb} {playerName} ещё сильнее?
+[LOVE_TEMPLATE]	{playerName} просто слишком {adjective}!
+[LOVE_TEMPLATE]	Мысли о {playerName} заставляют меня {intransitiveVerb}.
+[LOVE_TEMPLATE]	Когда я вижу {playerName}, мой день сразу {adjective}.
+[LOVE_TEMPLATE]	{playerName} — мой любимый {noun}.
+[LOVE_TEMPLATE]	Как же мне хочется {transitiveVerb} {playerName}!
+[LOVE_TEMPLATE]	Просто {adverb} мечтаю, что смогу {transitiveVerb} {playerName}.
+[LOVE_TEMPLATE]	Всякий раз, когда вижу {playerName}, внутри всё хочет {intransitiveVerb}.
+[LOVE_TEMPLATE]	У {playerName} самый {adjective} смех.
+[LOVE_TEMPLATE]	Жду не дождусь снова {transitiveVerb} {playerName}.
+[LOVE_TEMPLATE]	Если бы {playerName} знал, до чего он {adjective}.
+[LOVE_TEMPLATE]	Благодаря {playerName} я {adjective}.
+[LOVE_TEMPLATE]	{playerName}, ты {intensifier} {adjective}!
+[LOVE_TEMPLATE]	Я просто хочу {transitiveVerb} {playerName} весь день.
+[LOVE_TEMPLATE]	{playerName}, из-за тебя хочется {intransitiveVerb}.
+[LOVE_TEMPLATE]	Мир {adjective}, когда есть {playerName}.
+[LOVE_TEMPLATE]	{playerName} — как самый {adjective} сон.
+[LOVE_TEMPLATE]	Не могу перестать улыбаться из-за {playerName}.
+[LOVE_TEMPLATE]	Думаю, что я решил {transitiveVerb} {playerName}.
+[LOVE_TEMPLATE]	Из-за {playerName} моё сердце готово {intransitiveVerb}.
+[LOVE_TEMPLATE]	Ох, {playerName}, ты такой {adjective}!
+[LOVE_TEMPLATE]	Одни мысли о {playerName} делают меня счастливым.
+[LOVE_TEMPLATE]	Хотел бы {transitiveVerb} {playerName} прямо сейчас.
+[LOVE_TEMPLATE]	{playerName} просто {adjective}.
+[LOVE_TEMPLATE]	Когда {playerName} рядом, я {adjective}.
+[LOVE_TEMPLATE]	{playerName}, ты делаешь мой день ярче!
+[LOVE_TEMPLATE]	Хочу {transitiveVerb} {playerName} больше всего на свете.
+[LOVE_TEMPLATE]	Просто {adverb} думаю о {playerName}.
+[LOVE_TEMPLATE]	{playerName} {intensifier} {adjective}!
+[LOVE_TEMPLATE]	Вайб у {playerName} {adjective} — не могу насытиться.
+[LOVE_TEMPLATE]	{playerName} {adverb} {adjective}.
+[LOVE_TEMPLATE]	Просто хочется {intransitiveVerb} — до чего {playerName} {adjective}.
+[LOVE_TEMPLATE]	{playerName} делает мой день {intensifier} офигенным.
+
+# Прилагательные, слот {adjective} — 137
+[LOVE_ADJECTIVE]	эпичный
+[LOVE_ADJECTIVE]	офигенный
+[LOVE_ADJECTIVE]	очаровательный
+[LOVE_ADJECTIVE]	милашный
+[LOVE_ADJECTIVE]	шикарный
+[LOVE_ADJECTIVE]	крутой
+[LOVE_ADJECTIVE]	мечтательный
+[LOVE_ADJECTIVE]	стильный
+[LOVE_ADJECTIVE]	клёвый
+[LOVE_ADJECTIVE]	звёздный
+[LOVE_ADJECTIVE]	забойный
+[LOVE_ADJECTIVE]	потрясающий
+[LOVE_ADJECTIVE]	захватывающий дух
+[LOVE_ADJECTIVE]	обаятельный
+[LOVE_ADJECTIVE]	милый
+[LOVE_ADJECTIVE]	а-фи-ги-тель-ный
+[LOVE_ADJECTIVE]	свежий
+[LOVE_ADJECTIVE]	задорный
+[LOVE_ADJECTIVE]	сияющий
+[LOVE_ADJECTIVE]	о-ля-ля-ля
+[LOVE_ADJECTIVE]	невероятный
+[LOVE_ADJECTIVE]	оляля
+[LOVE_ADJECTIVE]	обожаемый
+[LOVE_ADJECTIVE]	прелестный
+[LOVE_ADJECTIVE]	прокачанный
+[LOVE_ADJECTIVE]	аккуратный
+[LOVE_ADJECTIVE]	в точку
+[LOVE_ADJECTIVE]	чудесный
+[LOVE_ADJECTIVE]	0 1 1 0 0 0 1 1 0 1 1 1 0 1 0 1 0 1 1 1 0 1 0 0 0 1 1 0 0 1 0 1
+[LOVE_ADJECTIVE]	вуп-и-вуп-и-ву
+[LOVE_ADJECTIVE]	нра-нра
+[LOVE_ADJECTIVE]	ооо да да
+[LOVE_ADJECTIVE]	гладкий
+[LOVE_ADJECTIVE]	умный
+[LOVE_ADJECTIVE]	плавный
+[LOVE_ADJECTIVE]	искрящийся
+[LOVE_ADJECTIVE]	ОМГ
+[LOVE_ADJECTIVE]	сногсшибательный
+[LOVE_ADJECTIVE]	стильный
+[LOVE_ADJECTIVE]	оооо дааа
+[LOVE_ADJECTIVE]	превосходный
+[LOVE_ADJECTIVE]	высший
+[LOVE_ADJECTIVE]	сладкий
+[LOVE_ADJECTIVE]	вауский
+[LOVE_ADJECTIVE]	модный
+[LOVE_ADJECTIVE]	нереальный
+[LOVE_ADJECTIVE]	яркий
+[LOVE_ADJECTIVE]	убойный
+[LOVE_ADJECTIVE]	мне нра
+[LOVE_ADJECTIVE]	бип-буп
+[LOVE_ADJECTIVE]	оу май
+[LOVE_ADJECTIVE]	уф, в хорошем смысле
+[LOVE_ADJECTIVE]	блестящий
+[LOVE_ADJECTIVE]	о да да
+[LOVE_ADJECTIVE]	шикарный
+[LOVE_ADJECTIVE]	по ... трясающий
+[LOVE_ADJECTIVE]	сообразительный
+[LOVE_ADJECTIVE]	уютный
+[LOVE_ADJECTIVE]	ми ... стоп ... лый ... милый
+[LOVE_ADJECTIVE]	вуп-вуп
+[LOVE_ADJECTIVE]	обнимательный
+[LOVE_ADJECTIVE]	милый
+[LOVE_ADJECTIVE]	да, королева
+[LOVE_ADJECTIVE]	тааак типа ... вау
+[LOVE_ADJECTIVE]	божественный
+[LOVE_ADJECTIVE]	электрический
+[LOVE_ADJECTIVE]	элегантный
+[LOVE_ADJECTIVE]	элитный
+[LOVE_ADJECTIVE]	1337
+[LOVE_ADJECTIVE]	увлекательный
+[LOVE_ADJECTIVE]	манящий
+[LOVE_ADJECTIVE]	нарядный
+[LOVE_ADJECTIVE]	свирепый
+[LOVE_ADJECTIVE]	огонь
+[LOVE_ADJECTIVE]	фартовый
+[LOVE_ADJECTIVE]	гламурный
+[LOVE_ADJECTIVE]	великолепный
+[LOVE_ADJECTIVE]	режим хайпа
+[LOVE_ADJECTIVE]	культовый
+[LOVE_ADJECTIVE]	легендарный
+[LOVE_ADJECTIVE]	зажигательный
+[LOVE_ADJECTIVE]	вау-вау-вау
+[LOVE_ADJECTIVE]	волшебный
+[LOVE_ADJECTIVE]	величественный
+[LOVE_ADJECTIVE]	краси-и-и-ивый
+[LOVE_ADJECTIVE]	отжигающий
+[LOVE_ADJECTIVE]	драгоценный
+[LOVE_ADJECTIVE]	К Р У Т О ... круто
+[LOVE_ADJECTIVE]	М И Л О ... мило
+[LOVE_ADJECTIVE]	... ... *краснеет* ...
+[LOVE_ADJECTIVE]	убийственный
+[LOVE_ADJECTIVE]	пикантный
+[LOVE_ADJECTIVE]	робокрасавчик
+[LOVE_ADJECTIVE]	воу-воу да-да
+[LOVE_ADJECTIVE]	безупречный
+[LOVE_ADJECTIVE]	робомилый
+[LOVE_ADJECTIVE]	душевный
+[LOVE_ADJECTIVE]	победный
+[LOVE_ADJECTIVE]	робоочаровательный
+[LOVE_ADJECTIVE]	мощный
+[LOVE_ADJECTIVE]	хорошенький
+[LOVE_ADJECTIVE]	красивый
+[LOVE_ADJECTIVE]	сладкий
+[LOVE_ADJECTIVE]	добрый
+[LOVE_ADJECTIVE]	вау-вау-вау-вау-вау
+[LOVE_ADJECTIVE]	100%
+[LOVE_ADJECTIVE]	0 1 1 0 0 0 1 0 0 1 1 0 0 0 0 1 0 1 1 0 0 1 0 0
+[LOVE_ADJECTIVE]	весёлый
+[LOVE_ADJECTIVE]	храбрый
+[LOVE_ADJECTIVE]	интересный
+[LOVE_ADJECTIVE]	умный головой
+[LOVE_ADJECTIVE]	искрящийся
+[LOVE_ADJECTIVE]	блестящий
+[LOVE_ADJECTIVE]	тёплый
+[LOVE_ADJECTIVE]	героический
+[LOVE_ADJECTIVE]	дружелюбный
+[LOVE_ADJECTIVE]	финансово стабильный
+[LOVE_ADJECTIVE]	о-ля-ля о-ля-ля-ля-ля
+[LOVE_ADJECTIVE]	романтичный
+[LOVE_ADJECTIVE]	уютный
+[LOVE_ADJECTIVE]	чудесный
+[LOVE_ADJECTIVE]	фантастический
+[LOVE_ADJECTIVE]	супер
+[LOVE_ADJECTIVE]	отличный
+[LOVE_ADJECTIVE]	восхитительный
+[LOVE_ADJECTIVE]	сказочный
+[LOVE_ADJECTIVE]	изумительный
+[LOVE_ADJECTIVE]	славный
+[LOVE_ADJECTIVE]	приятный
+[LOVE_ADJECTIVE]	хороший
+[LOVE_ADJECTIVE]	особенный
+[LOVE_ADJECTIVE]	уникальный
+[LOVE_ADJECTIVE]	о-ля-ля-ля да да
+[LOVE_ADJECTIVE]	да да вау вау
+[LOVE_ADJECTIVE]	вааауууу
+[LOVE_ADJECTIVE]	о вааауууу
+[LOVE_ADJECTIVE]	о бо-о-оже
+
+# Усилители, слот {intensifier} — 77
+[LOVE_INTENSIFIER]	полностью
+[LOVE_INTENSIFIER]	супер
+[LOVE_INTENSIFIER]	убер
+[LOVE_INTENSIFIER]	мега
+[LOVE_INTENSIFIER]	супер-мега
+[LOVE_INTENSIFIER]	серьёзно
+[LOVE_INTENSIFIER]	по-крупному
+[LOVE_INTENSIFIER]	реально
+[LOVE_INTENSIFIER]	абсолютно
+[LOVE_INTENSIFIER]	совершенно
+[LOVE_INTENSIFIER]	по-настоящему
+[LOVE_INTENSIFIER]	напрочь
+[LOVE_INTENSIFIER]	открыто
+[LOVE_INTENSIFIER]	невероятно
+[LOVE_INTENSIFIER]	безумно
+[LOVE_INTENSIFIER]	типа ...
+[LOVE_INTENSIFIER]	типа... серьёзно
+[LOVE_INTENSIFIER]	таааак
+[LOVE_INTENSIFIER]	правда
+[LOVE_INTENSIFIER]	так
+[LOVE_INTENSIFIER]	тааааааааак
+[LOVE_INTENSIFIER]	неправдоподобно
+[LOVE_INTENSIFIER]	очень
+[LOVE_INTENSIFIER]	типа таааак сильно
+[LOVE_INTENSIFIER]	сверх
+[LOVE_INTENSIFIER]	крайне
+[LOVE_INTENSIFIER]	правда-правда
+[LOVE_INTENSIFIER]	свирепо
+[LOVE_INTENSIFIER]	типа, по-настоящему
+[LOVE_INTENSIFIER]	сильно
+[LOVE_INTENSIFIER]	огромно
+[LOVE_INTENSIFIER]	безмерно
+[LOVE_INTENSIFIER]	интенсивно
+[LOVE_INTENSIFIER]	массово
+[LOVE_INTENSIFIER]	так так тааак
+[LOVE_INTENSIFIER]	правда-правда-правда
+[LOVE_INTENSIFIER]	типа стопудово
+[LOVE_INTENSIFIER]	типа... полностью
+[LOVE_INTENSIFIER]	типа.. как-то тааак сильно
+[LOVE_INTENSIFIER]	просто
+[LOVE_INTENSIFIER]	предельно
+[LOVE_INTENSIFIER]	удивительно
+[LOVE_INTENSIFIER]	супер-мега-ультра
+[LOVE_INTENSIFIER]	ультра
+[LOVE_INTENSIFIER]	необычно
+[LOVE_INTENSIFIER]	сильно-сильно
+[LOVE_INTENSIFIER]	сильно
+[LOVE_INTENSIFIER]	нереально
+[LOVE_INTENSIFIER]	типа ... нереа-а-ально
+[LOVE_INTENSIFIER]	дико
+[LOVE_INTENSIFIER]	сверх-сверх
+[LOVE_INTENSIFIER]	подавляюще
+[LOVE_INTENSIFIER]	пра-а-авда
+[LOVE_INTENSIFIER]	странно
+[LOVE_INTENSIFIER]	суууупер
+[LOVE_INTENSIFIER]	сильно-си-и-ильно
+[LOVE_INTENSIFIER]	жутко
+[LOVE_INTENSIFIER]	типа суууупер
+[LOVE_INTENSIFIER]	правда таааак
+[LOVE_INTENSIFIER]	тихонько
+[LOVE_INTENSIFIER]	открыто
+[LOVE_INTENSIFIER]	буквально
+[LOVE_INTENSIFIER]	по-настоя-я-ящему так
+[LOVE_INTENSIFIER]	реально
+[LOVE_INTENSIFIER]	честно
+[LOVE_INTENSIFIER]	типа как
+[LOVE_INTENSIFIER]	вроде как
+[LOVE_INTENSIFIER]	в общем
+[LOVE_INTENSIFIER]	откровенно
+[LOVE_INTENSIFIER]	типа буквально
+[LOVE_INTENSIFIER]	очень-очень
+[LOVE_INTENSIFIER]	типа типа.. типа... тааак сильно
+[LOVE_INTENSIFIER]	типа... вообще-то
+[LOVE_INTENSIFIER]	суууупер суууупер
+[LOVE_INTENSIFIER]	неподдельно
+[LOVE_INTENSIFIER]	истинно
+[LOVE_INTENSIFIER]	искренне
+
+# Наречия, слот {adverb} — 77
+[LOVE_ADVERB]	полностью
+[LOVE_ADVERB]	супер
+[LOVE_ADVERB]	убер
+[LOVE_ADVERB]	мега
+[LOVE_ADVERB]	супер-мега
+[LOVE_ADVERB]	серьёзно
+[LOVE_ADVERB]	по-крупному
+[LOVE_ADVERB]	реально
+[LOVE_ADVERB]	абсолютно
+[LOVE_ADVERB]	совершенно
+[LOVE_ADVERB]	по-настоящему
+[LOVE_ADVERB]	напрочь
+[LOVE_ADVERB]	открыто
+[LOVE_ADVERB]	невероятно
+[LOVE_ADVERB]	безумно
+[LOVE_ADVERB]	типа ...
+[LOVE_ADVERB]	типа... серьёзно
+[LOVE_ADVERB]	таааак
+[LOVE_ADVERB]	правда
+[LOVE_ADVERB]	так
+[LOVE_ADVERB]	тааааааааак
+[LOVE_ADVERB]	неправдоподобно
+[LOVE_ADVERB]	очень
+[LOVE_ADVERB]	типа таааак
+[LOVE_ADVERB]	сверх
+[LOVE_ADVERB]	крайне
+[LOVE_ADVERB]	правда-правда
+[LOVE_ADVERB]	свирепо
+[LOVE_ADVERB]	типа, по-настоящему
+[LOVE_ADVERB]	сильно
+[LOVE_ADVERB]	огромно
+[LOVE_ADVERB]	безмерно
+[LOVE_ADVERB]	интенсивно
+[LOVE_ADVERB]	массово
+[LOVE_ADVERB]	так так тааак
+[LOVE_ADVERB]	правда-правда-правда
+[LOVE_ADVERB]	типа стопудово
+[LOVE_ADVERB]	типа... полностью
+[LOVE_ADVERB]	типа.. как-то тааак
+[LOVE_ADVERB]	просто
+[LOVE_ADVERB]	предельно
+[LOVE_ADVERB]	удивительно
+[LOVE_ADVERB]	супер-мега-ультра
+[LOVE_ADVERB]	ультра
+[LOVE_ADVERB]	необычно
+[LOVE_ADVERB]	сильно-сильно
+[LOVE_ADVERB]	сильно
+[LOVE_ADVERB]	нереально
+[LOVE_ADVERB]	типа ... нереа-а-ально
+[LOVE_ADVERB]	дико
+[LOVE_ADVERB]	сверх-сверх
+[LOVE_ADVERB]	подавляюще
+[LOVE_ADVERB]	пра-а-авда
+[LOVE_ADVERB]	странно
+[LOVE_ADVERB]	суууупер
+[LOVE_ADVERB]	сильно-си-и-ильно
+[LOVE_ADVERB]	жутко
+[LOVE_ADVERB]	типа суууупер
+[LOVE_ADVERB]	правда таааак
+[LOVE_ADVERB]	тихонько
+[LOVE_ADVERB]	открыто
+[LOVE_ADVERB]	буквально
+[LOVE_ADVERB]	по-настоя-я-ящему так
+[LOVE_ADVERB]	реально
+[LOVE_ADVERB]	честно
+[LOVE_ADVERB]	типа как
+[LOVE_ADVERB]	вроде как
+[LOVE_ADVERB]	в общем
+[LOVE_ADVERB]	откровенно
+[LOVE_ADVERB]	типа буквально
+[LOVE_ADVERB]	очень-очень
+[LOVE_ADVERB]	типа типа.. типа... тааак
+[LOVE_ADVERB]	типа... вообще-то
+[LOVE_ADVERB]	суууупер суууупер
+[LOVE_ADVERB]	неподдельно
+[LOVE_ADVERB]	истинно
+[LOVE_ADVERB]	искренне
+
+# Существительные, слот {noun} — 108
+[LOVE_NOUN]	зайка
+[LOVE_NOUN]	бро
+[LOVE_NOUN]	братуха
+[LOVE_NOUN]	мечта
+[LOVE_NOUN]	дружбан
+[LOVE_NOUN]	приятель
+[LOVE_NOUN]	кореш
+[LOVE_NOUN]	чемпик
+[LOVE_NOUN]	лучший игрок
+[LOVE_NOUN]	рок-звезда
+[LOVE_NOUN]	герой
+[LOVE_NOUN]	кумир
+[LOVE_NOUN]	звезда
+[LOVE_NOUN]	королева
+[LOVE_NOUN]	король
+[LOVE_NOUN]	малыш
+[LOVE_NOUN]	зверь
+[LOVE_NOUN]	босс
+[LOVE_NOUN]	брух
+[LOVE_NOUN]	босс-королева
+[LOVE_NOUN]	девчонка
+[LOVE_NOUN]	чувак
+[LOVE_NOUN]	гений
+[LOVE_NOUN]	гуру
+[LOVE_NOUN]	милашка
+[LOVE_NOUN]	легенда
+[LOVE_NOUN]	игрок
+[LOVE_NOUN]	босс-король
+[LOVE_NOUN]	пог
+[LOVE_NOUN]	напарник
+[LOVE_NOUN]	вундеркинд
+[LOVE_NOUN]	про
+[LOVE_NOUN]	образец для подражания
+[LOVE_NOUN]	парень
+[LOVE_NOUN]	родная душа
+[LOVE_NOUN]	супергерой
+[LOVE_NOUN]	сладенький
+[LOVE_NOUN]	близнец
+[LOVE_NOUN]	робот
+[LOVE_NOUN]	волшебник
+[LOVE_NOUN]	чудо
+[LOVE_NOUN]	крашик
+[LOVE_NOUN]	ангел
+[LOVE_NOUN]	вирусный хит
+[LOVE_NOUN]	благословение
+[LOVE_NOUN]	чемпион
+[LOVE_NOUN]	обаяшка
+[LOVE_NOUN]	краш
+[LOVE_NOUN]	дорогуша
+[LOVE_NOUN]	милый
+[LOVE_NOUN]	геймер
+[LOVE_NOUN]	любимчик
+[LOVE_NOUN]	друг
+[LOVE_NOUN]	самоцвет
+[LOVE_NOUN]	сердцеед
+[LOVE_NOUN]	сладуля
+[LOVE_NOUN]	разбиватель сердец
+[LOVE_NOUN]	вдохновение
+[LOVE_NOUN]	любовь
+[LOVE_NOUN]	главный
+[LOVE_NOUN]	вторая половинка
+[LOVE_NOUN]	крашкраш
+[LOVE_NOUN]	личность
+[LOVE_NOUN]	прелесть
+[LOVE_NOUN]	солнышко
+[LOVE_NOUN]	сокровище
+[LOVE_NOUN]	лучший друган
+[LOVE_NOUN]	бу
+[LOVE_NOUN]	милашка
+[LOVE_NOUN]	сестра
+[LOVE_NOUN]	сестрёнка
+[LOVE_NOUN]	брат
+[LOVE_NOUN]	братуха
+[LOVE_NOUN]	красотка
+[LOVE_NOUN]	мегакраш
+[LOVE_NOUN]	лучший друг
+[LOVE_NOUN]	суперкраш
+[LOVE_NOUN]	любимка-любимка
+[LOVE_NOUN]	главный герой
+[LOVE_NOUN]	робо
+[LOVE_NOUN]	икона
+[LOVE_NOUN]	легенда
+[LOVE_NOUN]	настроение
+[LOVE_NOUN]	вайб
+[LOVE_NOUN]	величайший
+[LOVE_NOUN]	мужик
+[LOVE_NOUN]	женщина
+[LOVE_NOUN]	цель
+[LOVE_NOUN]	победитель
+[LOVE_NOUN]	да, королева
+[LOVE_NOUN]	милый робот
+[LOVE_NOUN]	робокраш
+[LOVE_NOUN]	кореш
+[LOVE_NOUN]	любимый
+[LOVE_NOUN]	тыковка
+[LOVE_NOUN]	сахарок
+[LOVE_NOUN]	малыш
+[LOVE_NOUN]	персик
+[LOVE_NOUN]	голубка
+[LOVE_NOUN]	кексик
+[LOVE_NOUN]	лютик
+[LOVE_NOUN]	обнимашка
+[LOVE_NOUN]	глупый гусь
+[LOVE_NOUN]	плюшевый мишка
+[LOVE_NOUN]	мечта
+[LOVE_NOUN]	принцесса
+[LOVE_NOUN]	принц
+[LOVE_NOUN]	суперзвезда
+
+# Переходные глаголы, слот {transitiveVerb} — 136
+[LOVE_TRANSITIVE_VERB]	обожать
+[LOVE_TRANSITIVE_VERB]	петь о-ля-ля с
+[LOVE_TRANSITIVE_VERB]	сохнуть по
+[LOVE_TRANSITIVE_VERB]	фанатеть от
+[LOVE_TRANSITIVE_VERB]	болеть за
+[LOVE_TRANSITIVE_VERB]	о-ля-ля-кать из-за
+[LOVE_TRANSITIVE_VERB]	залипать на
+[LOVE_TRANSITIVE_VERB]	ловить вайб с
+[LOVE_TRANSITIVE_VERB]	фанатеть по-девчачьи от
+[LOVE_TRANSITIVE_VERB]	фанатеть по-пацански от
+[LOVE_TRANSITIVE_VERB]	ставить сердечко
+[LOVE_TRANSITIVE_VERB]	о-ля-ля-ля-ля
+[LOVE_TRANSITIVE_VERB]	вообще не мочь
+[LOVE_TRANSITIVE_VERB]	помешаться на
+[LOVE_TRANSITIVE_VERB]	спотыкаться о
+[LOVE_TRANSITIVE_VERB]	с ума сходить по
+[LOVE_TRANSITIVE_VERB]	беситься из-за
+[LOVE_TRANSITIVE_VERB]	двинуться на
+[LOVE_TRANSITIVE_VERB]	сходить с ума по
+[LOVE_TRANSITIVE_VERB]	заводиться от
+[LOVE_TRANSITIVE_VERB]	расхваливать
+[LOVE_TRANSITIVE_VERB]	читать книжку с
+[LOVE_TRANSITIVE_VERB]	быть до конца за
+[LOVE_TRANSITIVE_VERB]	проявлять любовь к
+[LOVE_TRANSITIVE_VERB]	танцевать с
+[LOVE_TRANSITIVE_VERB]	шипперить
+[LOVE_TRANSITIVE_VERB]	тихонько сохнуть по
+[LOVE_TRANSITIVE_VERB]	иметь слабость к
+[LOVE_TRANSITIVE_VERB]	не мочь перестать думать про
+[LOVE_TRANSITIVE_VERB]	заглядываться на
+[LOVE_TRANSITIVE_VERB]	испытывать робочувства к
+[LOVE_TRANSITIVE_VERB]	поймать крашик в
+[LOVE_TRANSITIVE_VERB]	таять глазами-сердечками по
+[LOVE_TRANSITIVE_VERB]	ловить бабочек в животе из-за
+[LOVE_TRANSITIVE_VERB]	смотреть глазами-сердечками на
+[LOVE_TRANSITIVE_VERB]	не мочь забыть
+[LOVE_TRANSITIVE_VERB]	не мочь насытиться
+[LOVE_TRANSITIVE_VERB]	расчувствоваться из-за
+[LOVE_TRANSITIVE_VERB]	мечтать о
+[LOVE_TRANSITIVE_VERB]	представлять счастье с
+[LOVE_TRANSITIVE_VERB]	не выдерживать
+[LOVE_TRANSITIVE_VERB]	слабеть перед
+[LOVE_TRANSITIVE_VERB]	таять от
+[LOVE_TRANSITIVE_VERB]	питать слабость к
+[LOVE_TRANSITIVE_VERB]	запасть на
+[LOVE_TRANSITIVE_VERB]	быть помешанным на
+[LOVE_TRANSITIVE_VERB]	краснеть из-за
+[LOVE_TRANSITIVE_VERB]	влюбиться по уши в
+[LOVE_TRANSITIVE_VERB]	чувствовать чувства к
+[LOVE_TRANSITIVE_VERB]	восхищаться
+[LOVE_TRANSITIVE_VERB]	крепко запасть на
+[LOVE_TRANSITIVE_VERB]	вообще не мочь с
+[LOVE_TRANSITIVE_VERB]	полностью залипнуть на
+[LOVE_TRANSITIVE_VERB]	потеряться в
+[LOVE_TRANSITIVE_VERB]	робочувствовать к
+[LOVE_TRANSITIVE_VERB]	быть без ума от
+[LOVE_TRANSITIVE_VERB]	бипать и бупать из-за
+[LOVE_TRANSITIVE_VERB]	собирать ценности с
+[LOVE_TRANSITIVE_VERB]	качаться под
+[LOVE_TRANSITIVE_VERB]	быть полностью погружённым в
+[LOVE_TRANSITIVE_VERB]	быть сражённым
+[LOVE_TRANSITIVE_VERB]	быть в восторге от
+[LOVE_TRANSITIVE_VERB]	падать из-за
+[LOVE_TRANSITIVE_VERB]	терять голову из-за
+[LOVE_TRANSITIVE_VERB]	рыдать из-за
+[LOVE_TRANSITIVE_VERB]	зацикливаться на
+[LOVE_TRANSITIVE_VERB]	умирать по
+[LOVE_TRANSITIVE_VERB]	смотреть на
+[LOVE_TRANSITIVE_VERB]	разглядывать
+[LOVE_TRANSITIVE_VERB]	не иметь ничего, кроме любви к
+[LOVE_TRANSITIVE_VERB]	ждать
+[LOVE_TRANSITIVE_VERB]	дичать от
+[LOVE_TRANSITIVE_VERB]	жить ради
+[LOVE_TRANSITIVE_VERB]	подсесть на
+[LOVE_TRANSITIVE_VERB]	чувствовать
+[LOVE_TRANSITIVE_VERB]	быть заряженным на
+[LOVE_TRANSITIVE_VERB]	слать безумную любовь
+[LOVE_TRANSITIVE_VERB]	слать обнимашки
+[LOVE_TRANSITIVE_VERB]	слать сердечки
+[LOVE_TRANSITIVE_VERB]	0 1 1 0 1 1 0 0 0 1 1 0 1 1 1 1 0 1 1 1 0 1 1 0 0 1 1 0 0 1 0 1
+[LOVE_TRANSITIVE_VERB]	дружить с
+[LOVE_TRANSITIVE_VERB]	ржать вместе с
+[LOVE_TRANSITIVE_VERB]	вайбовать с
+[LOVE_TRANSITIVE_VERB]	лайкать
+[LOVE_TRANSITIVE_VERB]	дорожить
+[LOVE_TRANSITIVE_VERB]	наслаждаться
+[LOVE_TRANSITIVE_VERB]	ценить
+[LOVE_TRANSITIVE_VERB]	любить
+[LOVE_TRANSITIVE_VERB]	беречь как сокровище
+[LOVE_TRANSITIVE_VERB]	заботиться о
+[LOVE_TRANSITIVE_VERB]	тащиться дин-дон от
+[LOVE_TRANSITIVE_VERB]	тосковать по
+[LOVE_TRANSITIVE_VERB]	думать о
+[LOVE_TRANSITIVE_VERB]	скучать по
+[LOVE_TRANSITIVE_VERB]	хотеть быть с
+[LOVE_TRANSITIVE_VERB]	улыбаться
+[LOVE_TRANSITIVE_VERB]	глядеть на
+[LOVE_TRANSITIVE_VERB]	краснеть рядом с
+[LOVE_TRANSITIVE_VERB]	стесняться рядом с
+[LOVE_TRANSITIVE_VERB]	смеяться и плакать с
+[LOVE_TRANSITIVE_VERB]	петь песни о любви с
+[LOVE_TRANSITIVE_VERB]	говорить с
+[LOVE_TRANSITIVE_VERB]	слушать
+[LOVE_TRANSITIVE_VERB]	держаться за руку с
+[LOVE_TRANSITIVE_VERB]	делиться секретами с
+[LOVE_TRANSITIVE_VERB]	гулять с
+[LOVE_TRANSITIVE_VERB]	сидеть с
+[LOVE_TRANSITIVE_VERB]	быть рядом с
+[LOVE_TRANSITIVE_VERB]	тусоваться с
+[LOVE_TRANSITIVE_VERB]	проводить время с
+[LOVE_TRANSITIVE_VERB]	быть возле
+[LOVE_TRANSITIVE_VERB]	подмигивать
+[LOVE_TRANSITIVE_VERB]	махать
+[LOVE_TRANSITIVE_VERB]	звонить
+[LOVE_TRANSITIVE_VERB]	писать
+[LOVE_TRANSITIVE_VERB]	петь для
+[LOVE_TRANSITIVE_VERB]	танцевать с
+[LOVE_TRANSITIVE_VERB]	готовить для
+[LOVE_TRANSITIVE_VERB]	рисовать для
+[LOVE_TRANSITIVE_VERB]	мастерить подарки для
+[LOVE_TRANSITIVE_VERB]	дарить подарки
+[LOVE_TRANSITIVE_VERB]	удивлять
+[LOVE_TRANSITIVE_VERB]	обнимать
+[LOVE_TRANSITIVE_VERB]	радовать налоговика вместе с
+[LOVE_TRANSITIVE_VERB]	катать телегу с
+[LOVE_TRANSITIVE_VERB]	робощекотать
+[LOVE_TRANSITIVE_VERB]	читать стендап для
+[LOVE_TRANSITIVE_VERB]	любоваться закатом с
+[LOVE_TRANSITIVE_VERB]	смеяться вместе с
+[LOVE_TRANSITIVE_VERB]	смешить
+[LOVE_TRANSITIVE_VERB]	приносить радость
+[LOVE_TRANSITIVE_VERB]	дурачиться с
+[LOVE_TRANSITIVE_VERB]	ходить в приключения с
+[LOVE_TRANSITIVE_VERB]	исследовать с
+[LOVE_TRANSITIVE_VERB]	поехать в Японию с
+[LOVE_TRANSITIVE_VERB]	состариться вместе с
+
+# Непереходные глаголы, слот {intransitiveVerb} — 140
+[LOVE_INTRANSITIVE_VERB]	вайбовать
+[LOVE_INTRANSITIVE_VERB]	вау-вау-вау
+[LOVE_INTRANSITIVE_VERB]	залипать
+[LOVE_INTRANSITIVE_VERB]	мечтать наяву
+[LOVE_INTRANSITIVE_VERB]	влюбляться
+[LOVE_INTRANSITIVE_VERB]	фанатеть по-девчачьи
+[LOVE_INTRANSITIVE_VERB]	фанатеть по-пацански
+[LOVE_INTRANSITIVE_VERB]	ликовать
+[LOVE_INTRANSITIVE_VERB]	паниковать
+[LOVE_INTRANSITIVE_VERB]	таять
+[LOVE_INTRANSITIVE_VERB]	чилить
+[LOVE_INTRANSITIVE_VERB]	робосталкерить
+[LOVE_INTRANSITIVE_VERB]	делать о-ля-ля
+[LOVE_INTRANSITIVE_VERB]	робо-танцевать
+[LOVE_INTRANSITIVE_VERB]	отжигать
+[LOVE_INTRANSITIVE_VERB]	обниматься
+[LOVE_INTRANSITIVE_VERB]	тусить
+[LOVE_INTRANSITIVE_VERB]	работать
+[LOVE_INTRANSITIVE_VERB]	совпадать
+[LOVE_INTRANSITIVE_VERB]	загружаться
+[LOVE_INTRANSITIVE_VERB]	встречаться
+[LOVE_INTRANSITIVE_VERB]	ловить чувства
+[LOVE_INTRANSITIVE_VERB]	соединяться
+[LOVE_INTRANSITIVE_VERB]	ладить
+[LOVE_INTRANSITIVE_VERB]	робо-тусить
+[LOVE_INTRANSITIVE_VERB]	заглядываться
+[LOVE_INTRANSITIVE_VERB]	поднимать глаза
+[LOVE_INTRANSITIVE_VERB]	навёрстывать
+[LOVE_INTRANSITIVE_VERB]	тусоваться
+[LOVE_INTRANSITIVE_VERB]	настраиваться
+[LOVE_INTRANSITIVE_VERB]	ломаться
+[LOVE_INTRANSITIVE_VERB]	подключаться
+[LOVE_INTRANSITIVE_VERB]	нырять
+[LOVE_INTRANSITIVE_VERB]	влезать
+[LOVE_INTRANSITIVE_VERB]	быть в деле
+[LOVE_INTRANSITIVE_VERB]	коллабить
+[LOVE_INTRANSITIVE_VERB]	делиться
+[LOVE_INTRANSITIVE_VERB]	меняться
+[LOVE_INTRANSITIVE_VERB]	торговать
+[LOVE_INTRANSITIVE_VERB]	договариваться
+[LOVE_INTRANSITIVE_VERB]	работать
+[LOVE_INTRANSITIVE_VERB]	играть
+[LOVE_INTRANSITIVE_VERB]	соревноваться
+[LOVE_INTRANSITIVE_VERB]	бросать вызов
+[LOVE_INTRANSITIVE_VERB]	включаться
+[LOVE_INTRANSITIVE_VERB]	присоединяться
+[LOVE_INTRANSITIVE_VERB]	влезать в тему
+[LOVE_INTRANSITIVE_VERB]	подмешиваться
+[LOVE_INTRANSITIVE_VERB]	добавляться
+[LOVE_INTRANSITIVE_VERB]	помогать
+[LOVE_INTRANSITIVE_VERB]	поддерживать
+[LOVE_INTRANSITIVE_VERB]	следить
+[LOVE_INTRANSITIVE_VERB]	отслеживать
+[LOVE_INTRANSITIVE_VERB]	приглядывать
+[LOVE_INTRANSITIVE_VERB]	поспевать
+[LOVE_INTRANSITIVE_VERB]	быть в курсе
+[LOVE_INTRANSITIVE_VERB]	не спускать глаз
+[LOVE_INTRANSITIVE_VERB]	гудеть
+[LOVE_INTRANSITIVE_VERB]	вау
+[LOVE_INTRANSITIVE_VERB]	качать свежее обновление
+[LOVE_INTRANSITIVE_VERB]	обновляться
+[LOVE_INTRANSITIVE_VERB]	кричать привет
+[LOVE_INTRANSITIVE_VERB]	орать
+[LOVE_INTRANSITIVE_VERB]	визжать
+[LOVE_INTRANSITIVE_VERB]	хайпить
+[LOVE_INTRANSITIVE_VERB]	бип-буп бип-буп
+[LOVE_INTRANSITIVE_VERB]	изливать душу
+[LOVE_INTRANSITIVE_VERB]	выражаться
+[LOVE_INTRANSITIVE_VERB]	выбалтывать
+[LOVE_INTRANSITIVE_VERB]	признаваться в любви
+[LOVE_INTRANSITIVE_VERB]	признавать чувства
+[LOVE_INTRANSITIVE_VERB]	объявлять банкротство
+[LOVE_INTRANSITIVE_VERB]	мечтать
+[LOVE_INTRANSITIVE_VERB]	краснеть
+[LOVE_INTRANSITIVE_VERB]	воображать
+[LOVE_INTRANSITIVE_VERB]	робо-пускать слюни
+[LOVE_INTRANSITIVE_VERB]	зацикливаться
+[LOVE_INTRANSITIVE_VERB]	восхищаться
+[LOVE_INTRANSITIVE_VERB]	делать вуп-вуп
+[LOVE_INTRANSITIVE_VERB]	паниковать
+[LOVE_INTRANSITIVE_VERB]	терять голову
+[LOVE_INTRANSITIVE_VERB]	беситься
+[LOVE_INTRANSITIVE_VERB]	чувствовать
+[LOVE_INTRANSITIVE_VERB]	светиться
+[LOVE_INTRANSITIVE_VERB]	... ну не знаю ...
+[LOVE_INTRANSITIVE_VERB]	спотыкаться
+[LOVE_INTRANSITIVE_VERB]	качаться
+[LOVE_INTRANSITIVE_VERB]	бип-буп
+[LOVE_INTRANSITIVE_VERB]	влюбляться
+[LOVE_INTRANSITIVE_VERB]	флиртовать
+[LOVE_INTRANSITIVE_VERB]	хихикать
+[LOVE_INTRANSITIVE_VERB]	улыбаться
+[LOVE_INTRANSITIVE_VERB]	смеяться
+[LOVE_INTRANSITIVE_VERB]	сиять
+[LOVE_INTRANSITIVE_VERB]	ухмыляться
+[LOVE_INTRANSITIVE_VERB]	гадать
+[LOVE_INTRANSITIVE_VERB]	желать
+[LOVE_INTRANSITIVE_VERB]	надеяться
+[LOVE_INTRANSITIVE_VERB]	тосковать
+[LOVE_INTRANSITIVE_VERB]	лайкать
+[LOVE_INTRANSITIVE_VERB]	ставить лайк и подписываться
+[LOVE_INTRANSITIVE_VERB]	реагировать
+[LOVE_INTRANSITIVE_VERB]	сидеть в тени
+[LOVE_INTRANSITIVE_VERB]	имбовать
+[LOVE_INTRANSITIVE_VERB]	исчезать
+[LOVE_INTRANSITIVE_VERB]	пукать
+[LOVE_INTRANSITIVE_VERB]	подглядывать
+[LOVE_INTRANSITIVE_VERB]	шпионить
+[LOVE_INTRANSITIVE_VERB]	выглядывать
+[LOVE_INTRANSITIVE_VERB]	вздыхать
+[LOVE_INTRANSITIVE_VERB]	дышать
+[LOVE_INTRANSITIVE_VERB]	понимать как никто
+[LOVE_INTRANSITIVE_VERB]	резонировать
+[LOVE_INTRANSITIVE_VERB]	тащиться дин-дон
+[LOVE_INTRANSITIVE_VERB]	бупать
+[LOVE_INTRANSITIVE_VERB]	джемить
+[LOVE_INTRANSITIVE_VERB]	трепетать
+[LOVE_INTRANSITIVE_VERB]	покалывать
+[LOVE_INTRANSITIVE_VERB]	кружиться
+[LOVE_INTRANSITIVE_VERB]	танцевать
+[LOVE_INTRANSITIVE_VERB]	петь
+[LOVE_INTRANSITIVE_VERB]	напевать
+[LOVE_INTRANSITIVE_VERB]	пиликать
+[LOVE_INTRANSITIVE_VERB]	скакать
+[LOVE_INTRANSITIVE_VERB]	парить
+[LOVE_INTRANSITIVE_VERB]	искриться
+[LOVE_INTRANSITIVE_VERB]	пузыриться
+[LOVE_INTRANSITIVE_VERB]	чирикать
+[LOVE_INTRANSITIVE_VERB]	блестеть
+[LOVE_INTRANSITIVE_VERB]	мерцать
+[LOVE_INTRANSITIVE_VERB]	размышлять
+[LOVE_INTRANSITIVE_VERB]	восхищаться
+[LOVE_INTRANSITIVE_VERB]	дышать
+[LOVE_INTRANSITIVE_VERB]	расслабляться
+[LOVE_INTRANSITIVE_VERB]	млеть
+[LOVE_INTRANSITIVE_VERB]	смеяться
+[LOVE_INTRANSITIVE_VERB]	воображать
+[LOVE_INTRANSITIVE_VERB]	таять
+[LOVE_INTRANSITIVE_VERB]	ухмыляться
+[LOVE_INTRANSITIVE_VERB]	посмеиваться
