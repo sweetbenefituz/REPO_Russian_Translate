@@ -54,6 +54,20 @@ PAYLOAD = [
     "Chat.tsv",
 ]
 
+# Папки с картинками: пакуем целиком, каждый файл внутри — отдельная надпись.
+PAYLOAD_DIRS = [
+    "Textures",
+]
+
+
+def dir_files(name):
+    """Файлы внутри папки мода, путями относительно MOD, в порядке имён."""
+    root = os.path.join(MOD, name)
+    if not os.path.isdir(root):
+        return []
+    return [os.path.join(name, f) for f in sorted(os.listdir(root))
+            if os.path.isfile(os.path.join(root, f))]
+
 
 def read(path):
     return io.open(path, encoding="utf-8-sig").read()
@@ -84,17 +98,26 @@ def main():
     if missing:
         sys.exit("В папке мода нет файлов, не пакую: " + ", ".join(missing))
 
+    empty = [d for d in PAYLOAD_DIRS if not dir_files(d)]
+    if empty:
+        sys.exit("Папки с картинками пустые или отсутствуют, не пакую: " + ", ".join(empty))
+
+    payload = PAYLOAD + [f for d in PAYLOAD_DIRS for f in dir_files(d)]
+
     out = os.path.join(PROJECT, "Sweet_Russian_Translate-%s.zip" % version)
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
-        for f in PAYLOAD:
-            z.write(os.path.join(MOD, f), f)
+        for f in payload:
+            z.write(os.path.join(MOD, f), f.replace(os.sep, "/"))
 
-    print("Готово: %s (%d файлов, версия %s)" % (out, len(PAYLOAD), version))
+    print("Готово: %s (%d файлов, версия %s)" % (out, len(payload), version))
 
     # ponytail: раскладка в профиль — простое копирование поверх, без удаления
     # лишнего. Понадобится чистая установка — снести папку профиля руками.
     if os.path.isdir(INSTALL):
-        for f in PAYLOAD:
+        for d in PAYLOAD_DIRS:
+            if not os.path.isdir(os.path.join(INSTALL, d)):
+                os.makedirs(os.path.join(INSTALL, d))
+        for f in payload:
             shutil.copy(os.path.join(MOD, f), os.path.join(INSTALL, f))
         print("Разложено для проверки в игре: %s" % INSTALL)
     else:

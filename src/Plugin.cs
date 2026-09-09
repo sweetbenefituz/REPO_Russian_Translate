@@ -8,7 +8,7 @@ using HarmonyLib;
 
 namespace SweetRussianTranslate;
 
-[BepInPlugin(Guid, "Sweet Russian Translate", "0.1.3")]
+[BepInPlugin(Guid, "Sweet Russian Translate", "0.2.0")]
 // Мягкая зависимость: espeakTTS ставится вместе с модом через Thunderstore, но если
 // его снесли руками — перевод должен работать дальше, просто без озвучки. Флаг всё
 // равно даёт нужный порядок загрузки: espeakTTS успевает создать свои настройки
@@ -45,6 +45,7 @@ public class Plugin : BaseUnityPlugin
 		}
 		Log.LogInfo("Sweet Russian Translate loaded from " + ModFolder + ", patched methods: " + patched);
 		TuneEspeak();
+		TuneTextures();
 	}
 
 	/// <summary>
@@ -70,6 +71,25 @@ public class Plugin : BaseUnityPlugin
 		ConfigFile espeak = info.Instance.Config;
 		Retune(espeak, "Language", EspeakDefaultLanguage, "ru");
 		Retune(espeak, "Speed", EspeakDefaultSpeed, RussianSpeed);
+	}
+
+	/// <summary>
+	/// Надписи на вывесках и плакатах нарисованы прямо на текстурах, таблицами
+	/// их не переведёшь — только подменой картинки. Файлы игры при этом не
+	/// трогаются, подмена живёт в памяти, см. <see cref="TexturePatch" />.
+	/// </summary>
+	private void TuneTextures()
+	{
+		if (!Config.Bind("Textures", "Translate textures", true,
+				"Переводить надписи, нарисованные на текстурах: вывески комнат, плакаты, экраны. "
+				+ "Выключи, если хочешь видеть их по-английски или подозреваешь их в тормозах. "
+				+ "Меняется только при перезапуске игры.").Value)
+		{
+			Log.LogInfo("Textures translation is off by config, signs stay English.");
+			return;
+		}
+		TexturePatch.Init(ModFolder);
+		StartCoroutine(TexturePatch.Loop());
 	}
 
 	/// <summary>Ставит своё значение только там, где стоит нетронутое умолчание espeakTTS.</summary>
