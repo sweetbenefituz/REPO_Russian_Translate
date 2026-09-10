@@ -22,6 +22,9 @@ TEXTURES = os.path.join(PROJECT, "mod", "Textures")
 
 # в именах ассетов Unity встречается и амперсанд, и скобки, и дефис
 NAME = re.compile(rb"[A-Za-z0-9_ ()&+.,'-]{4,120}")
+SHORT = re.compile(rb"\x03\x00\x00\x00([A-Za-z0-9_ ]{3})"
+                   rb"|\x02\x00\x00\x00([A-Za-z0-9_ ]{2})"
+                   rb"|\x01\x00\x00\x00([A-Za-z0-9_ ])")
 
 
 def game_data():
@@ -58,8 +61,14 @@ def main():
         path = os.path.join(data, chunk)
         if not os.path.isfile(path):
             sys.exit("Не найден файл игры: " + path)
-        for m in NAME.findall(io.open(path, "rb").read()):
+        blob = io.open(path, "rb").read()
+        for m in NAME.findall(blob):
             names.add(m.decode("ascii"))
+        # короткие имена (hg4) общий поиск не видит, а искать всё от 1 символа -
+        # значит находить что угодно где угодно. Берём только точную запись Unity:
+        # длина строки четырьмя байтами, сразу за ней само имя
+        for m in SHORT.findall(blob):
+            names.add(b"".join(m).decode("ascii"))
 
     have = set(key(n) for n in names)
     missing = [f for f in files if key(os.path.splitext(f)[0]) not in have]

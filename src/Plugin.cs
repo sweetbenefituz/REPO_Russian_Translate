@@ -8,7 +8,7 @@ using HarmonyLib;
 
 namespace SweetRussianTranslate;
 
-[BepInPlugin(Guid, "Sweet Russian Translate", "0.2.2")]
+[BepInPlugin(Guid, "Sweet Russian Translate", "0.2.3")]
 // Мягкая зависимость: espeakTTS ставится вместе с модом через Thunderstore, но если
 // его снесли руками — перевод должен работать дальше, просто без озвучки. Флаг всё
 // равно даёт нужный порядок загрузки: espeakTTS успевает создать свои настройки
