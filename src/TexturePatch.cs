@@ -36,13 +36,16 @@ internal static class TexturePatch
 
 	internal static void Init(string modFolder)
 	{
-		string dir = Path.Combine(modFolder, "Textures");
-		if (!Directory.Exists(dir))
+		// Ищем по всей папке мода, а не только в Textures: Thunderstore Mod Manager
+		// при установке из архива сваливает картинки из Textures прямо к dll.
+		// Все наши картинки начинаются с resources_, так icon.png не попадёт под замену.
+		string[] found = Directory.GetFiles(modFolder, "resources_*.png", SearchOption.AllDirectories);
+		if (found.Length == 0)
 		{
-			Plugin.Log.LogWarning("Папки Textures нет, надписи на текстурах останутся английскими: " + dir);
+			Plugin.Log.LogWarning("Картинок resources_*.png нет, надписи на текстурах останутся английскими: " + modFolder);
 			return;
 		}
-		foreach (string path in Directory.GetFiles(dir, "*.png"))
+		foreach (string path in found)
 		{
 			string key = Key(Path.GetFileNameWithoutExtension(path));
 			if (key.Length == 0)

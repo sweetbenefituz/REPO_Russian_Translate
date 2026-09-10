@@ -22,22 +22,6 @@ PROJECT = os.path.dirname(SRC)
 MOD = os.path.join(PROJECT, "mod")
 
 
-def profile():
-    """Имя профиля Thunderstore берём из src/Local.props — он в git не попадает."""
-    path = os.path.join(SRC, "Local.props")
-    if os.path.isfile(path):
-        found = re.search(r"<RepoProfile>(.+?)</RepoProfile>",
-                          io.open(path, encoding="utf-8-sig").read())
-        if found:
-            return found.group(1).strip()
-    return "Default"
-
-
-INSTALL = os.path.join(
-    os.environ.get("APPDATA", ""), "Thunderstore Mod Manager", "DataFolder",
-    "REPO", "profiles", profile(), "BepInEx", "plugins",
-    "Sweet_team-Sweet_Russian_Translate")
-
 PAYLOAD = [
     "manifest.json",
     "icon.png",
@@ -110,18 +94,11 @@ def main():
             z.write(os.path.join(MOD, f), f.replace(os.sep, "/"))
 
     print("Готово: %s (%d файлов, версия %s)" % (out, len(payload), version))
-
-    # ponytail: раскладка в профиль — простое копирование поверх, без удаления
-    # лишнего. Понадобится чистая установка — снести папку профиля руками.
-    if os.path.isdir(INSTALL):
-        for d in PAYLOAD_DIRS:
-            if not os.path.isdir(os.path.join(INSTALL, d)):
-                os.makedirs(os.path.join(INSTALL, d))
-        for f in payload:
-            shutil.copy(os.path.join(MOD, f), os.path.join(INSTALL, f))
-        print("Разложено для проверки в игре: %s" % INSTALL)
-    else:
-        print("Папки профиля нет, в игру не разложил: %s" % INSTALL)
+    # В профиль сами не раскладываем: менеджер раскладывает архив по-своему
+    # (папку Textures, например, выкидывает), и тест своей раскладки проверял
+    # не то, что получают игроки. Проверять только так, как ставят игроки.
+    print("Проверка в игре: Thunderstore Mod Manager -> Settings -> "
+          "Import local mod -> этот архив. Тот же архив потом выкладывать.")
 
 
 if __name__ == "__main__":
