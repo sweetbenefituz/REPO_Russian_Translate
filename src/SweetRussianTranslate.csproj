@@ -4,10 +4,13 @@
     <AssemblyName>SweetRussianTranslate</AssemblyName>
     <TargetFramework>netstandard2.1</TargetFramework>
     <LangVersion>latest</LangVersion>
-    <Version>0.2.0</Version>
+    <Version>0.2.1</Version>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <GenerateDependencyFile>false</GenerateDependencyFile>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <!-- Без отладочных символов: иначе в DLL вшивается полный путь к .pdb,
+         а в нём имя пользователя Windows. -->
+    <DebugType>none</DebugType>
   </PropertyGroup>
 
   <!-- Личные пути живут в Local.props, он в git не попадает. Образец —

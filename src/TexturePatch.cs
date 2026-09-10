@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using HarmonyLib;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -13,8 +14,8 @@ namespace SweetRussianTranslate;
 /// </summary>
 internal static class TexturePatch
 {
-	/// <summary>Как часто искать новые материалы, секунды.</summary>
-	private const float ScanEvery = 2f;
+	/// <summary>Когда осматривать материалы, секунды от готовности уровня.</summary>
+	private static readonly float[] ScanAt = { 0f, 3f, 10f };
 
 	/// <summary>Ключ имени -> путь к нашему PNG.</summary>
 	private static readonly Dictionary<string, string> Files = new Dictionary<string, string>();
@@ -59,12 +60,12 @@ internal static class TexturePatch
 	}
 
 	/// <summary>
-	/// Ищет материалы, которым можно подставить нашу текстуру.
+	/// Осматривает материалы после сборки уровня: сразу и ещё пару раз вдогонку,
+	/// потом молчит до следующего уровня. Запускается из <see cref="LevelDonePatch" />.
 	/// </summary>
-	/// ponytail: опрос раз в две секунды, а не патч по месту. Уровни в REPO
-	/// собираются на ходу, материалы подгружаются кусками уже после загрузки
-	/// сцены, и точный момент готовности нам неизвестен. Найдётся метод
-	/// генерации уровня — заменить опрос на постфикс к нему.
+	/// ponytail: вдогонку — за тем, что игра докидывает после «готово» (покупки в
+	/// грузовике, косметика опоздавших игроков). Появится надпись, которая
+	/// грузится позже 10 секунд, — добавить точку в ScanAt.
 	///
 	/// Осматриваем ВСЕ материалы каждый раз, а не только новые. Раньше был список
 	/// уже осмотренных, и из-за него подмена слетала при второй загрузке карты:
@@ -72,16 +73,18 @@ internal static class TexturePatch
 	/// картинкой, а мы его пропускали как «уже видели». Повторная замена ничего
 	/// не стоит: нашей картинке мы даём другое имя, и второй раз она под замену
 	/// уже не подходит.
-	internal static IEnumerator Loop()
+	internal static IEnumerator AfterLevel()
 	{
 		if (Files.Count == 0)
 		{
 			yield break;
 		}
-		while (true)
+		float waited = 0f;
+		foreach (float at in ScanAt)
 		{
+			yield return new WaitForSeconds(at - waited);
+			waited = at;
 			Scan();
-			yield return new WaitForSeconds(ScanEvery);
 		}
 	}
 
@@ -214,5 +217,23 @@ internal static class TexturePatch
 		}
 		// "resources" без номера — имя самой игры, не наш префикс: не режем
 		return at > dump.Length ? key.Substring(at) : key;
+	}
+}
+
+/// <summary>
+/// Уровень собран: стены, предметы, ценности и враги на месте. Так устроены все
+/// уровни, включая главное меню, лобби и магазин, и срабатывает у каждого игрока.
+/// </summary>
+[HarmonyPatch(typeof(LevelGenerator), "GenerateDone")]
+internal static class LevelDonePatch
+{
+	[HarmonyPostfix]
+	private static void Postfix(LevelGenerator __instance)
+	{
+		// без флага это чужой вызов, игра его отбросила
+		if (__instance.Generated)
+		{
+			Plugin.Instance.StartCoroutine(TexturePatch.AfterLevel());
+		}
 	}
 }

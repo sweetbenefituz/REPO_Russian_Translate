@@ -8,7 +8,7 @@ using HarmonyLib;
 
 namespace SweetRussianTranslate;
 
-[BepInPlugin(Guid, "Sweet Russian Translate", "0.2.0")]
+[BepInPlugin(Guid, "Sweet Russian Translate", "0.2.1")]
 // Мягкая зависимость: espeakTTS ставится вместе с модом через Thunderstore, но если
 // его снесли руками — перевод должен работать дальше, просто без озвучки. Флаг всё
 // равно даёт нужный порядок загрузки: espeakTTS успевает создать свои настройки
@@ -30,14 +30,18 @@ public class Plugin : BaseUnityPlugin
 
 	internal static string ModFolder;
 
+	/// <summary>На нём крутим корутины: живёт весь запуск игры, в отличие от уровня.</summary>
+	internal static Plugin Instance;
+
 	private void Awake()
 	{
+		Instance = this;
 		Log = Logger;
 		ModFolder = Path.GetDirectoryName(Info.Location);
 		Harmony harmony = new Harmony(Guid);
 		harmony.PatchAll(Assembly.GetExecutingAssembly());
 		// Реплики в чате видно только в игре с людьми, поэтому пишем в лог, сколько
-		// методов реально пропатчено: ждём 8.
+		// методов реально пропатчено: ждём 9.
 		int patched = 0;
 		foreach (MethodBase method in harmony.GetPatchedMethods())
 		{
@@ -89,7 +93,6 @@ public class Plugin : BaseUnityPlugin
 			return;
 		}
 		TexturePatch.Init(ModFolder);
-		StartCoroutine(TexturePatch.Loop());
 	}
 
 	/// <summary>Ставит своё значение только там, где стоит нетронутое умолчание espeakTTS.</summary>
